@@ -242,6 +242,142 @@ body {
     .scoring-table td {
         padding: 10px 8px;
     }
+    
+    /* Responsive styles for tournament tables */
+    .tournament-structure,
+    .matchups-example,
+    .commander-tables {
+        padding: 15px;
+        margin: 15px 0;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .tournament-structure table,
+    .matchups-example table,
+    .commander-tables table {
+        font-size: 0.8rem;
+        min-width: 100%;
+    }
+    
+    .tournament-structure th,
+    .tournament-structure td,
+    .matchups-example th,
+    .matchups-example td,
+    .commander-tables th,
+    .commander-tables td {
+        padding: 8px 6px;
+        font-size: 0.75rem;
+    }
+    
+    .tournament-structure th,
+    .matchups-example th,
+    .commander-tables th {
+        font-size: 0.7rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .commander-tables td {
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    
+    /* Add scroll indicator for tablets */
+    .tournament-structure::after,
+    .matchups-example::after,
+    .commander-tables::after {
+        content: "← Desliza horizontalmente si es necesario →";
+        display: block;
+        text-align: center;
+        font-size: 0.65rem;
+        opacity: 0.5;
+        margin-top: 8px;
+        font-style: italic;
+    }
+}
+
+/* Medium mobile screens */
+@media (max-width: 600px) {
+    .tournament-structure,
+    .matchups-example,
+    .commander-tables {
+        padding: 12px;
+        margin: 12px 0;
+    }
+    
+    .tournament-structure table,
+    .matchups-example table,
+    .commander-tables table {
+        font-size: 0.75rem;
+    }
+    
+    .tournament-structure th,
+    .tournament-structure td,
+    .matchups-example th,
+    .matchups-example td,
+    .commander-tables th,
+    .commander-tables td {
+        padding: 6px 4px;
+        font-size: 0.7rem;
+    }
+}
+
+/* Extra small screens - Complete table restructure */
+@media (max-width: 480px) {
+    .tournament-structure,
+    .matchups-example,
+    .commander-tables {
+        padding: 10px;
+        margin: 10px 0;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .tournament-structure table,
+    .matchups-example table,
+    .commander-tables table {
+        min-width: 300px;
+        width: 100%;
+        font-size: 0.7rem;
+        white-space: nowrap;
+    }
+    
+    .tournament-structure th,
+    .tournament-structure td,
+    .matchups-example th,
+    .matchups-example td,
+    .commander-tables th,
+    .commander-tables td {
+        padding: 8px 4px;
+        line-height: 1.2;
+        font-size: 0.7rem;
+    }
+    
+    .tournament-structure th,
+    .matchups-example th,
+    .commander-tables th {
+        font-size: 0.65rem;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+    }
+    
+    .commander-tables td {
+        font-size: 0.75rem;
+        font-weight: 600;
+    }
+    
+    /* Add scroll indicator */
+    .tournament-structure::after,
+    .matchups-example::after,
+    .commander-tables::after {
+        content: "← Desliza para ver más →";
+        display: block;
+        text-align: center;
+        font-size: 0.6rem;
+        opacity: 0.6;
+        margin-top: 5px;
+        font-style: italic;
+    }
 }
 
 .highlight {
